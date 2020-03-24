@@ -33,12 +33,12 @@ app.get("/delete", function (req, res)
 
 app.get("/edit", function (req, res) {
     let id = req.query.id;
-    res.send(`<form action="/editor?id=${id}" method="post">
+    res.send(`<form action="/edit?id=${id}" method="post">
             <input type="text" placeholder="Editor" name="eddata"/>
             <button type="submit">Edit</button> </form>`)
 })
 
-app.post("/editor", function (req, res) {
+app.post("/edit", function (req, res) {
     let tmpid = req.query.id;
     for (let i = 0; i < stack.length; i++) {
         if (stack[i].id == tmpid)
