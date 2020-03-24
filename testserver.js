@@ -6,32 +6,51 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 
 const stack = [];
+let counter = 0;
 
 app.get("/", function (req, res) {
     let template = "<ul>";
-    for (let i = 0, st = stack.reverse(); i < st.length; i++) {
-        template += (`<li>` + st[i] + `</li>`);
+    for (let i = 0; i < stack.length; i++) {
+        let id = stack[i].id;
+        template += (`<li>` + stack[i].value + `  ` + `<a href="/edit?id=${id}">Edit</a>` + `  ` + `<a href="/delete?id=${id}">Delete</a>` + `</li>`);
     }
     template += "</ul>";
-    stack.reverse();
     res.send(template+`
         <form action="/add" method="post">
             <input type="text" placeholder="Data" name="data"/>
             <button type="submit">Send</button>
 </form>
-<form action="/delete" method="post">
-            <input type="text" placeholder="To delete" name="deldata"/>
-            <button type="submit">Delete</button>
-</form>
 `)});
-app.post("/delete", function (req, res)
+app.get("/delete", function (req, res)
 {
-    stack.splice(stack.indexOf(req.body.deldata), 1);
+    let tmpid = req.query.id;
+    for (let i = 0; i < stack.length; i++) {
+        if (stack[i].id == tmpid)
+            stack.splice(i, 1);
+    }
     res.redirect("/");
 })
 
+app.get("/edit", function (req, res) {
+    let id = req.query.id;
+    res.send(`<form action="/editor?id=${id}" method="post">
+            <input type="text" placeholder="Editor" name="eddata"/>
+            <button type="submit">Edit</button> </form>`)
+})
+
+app.post("/editor", function (req, res) {
+    let tmpid = req.query.id;
+    for (let i = 0; i < stack.length; i++) {
+        if (stack[i].id == tmpid)
+            stack[i].value = req.body.eddata;
+    }
+    res.redirect("/");
+})
+
+
 app.post("/add", function (req, res) {
-    stack.push(req.body.data);
+    counter++;
+    stack.unshift({ value : req.body.data, id : counter });
     res.redirect("/");
 });
 
