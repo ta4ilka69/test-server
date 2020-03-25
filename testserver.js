@@ -23,27 +23,23 @@ app.get("/", function (req, res) {
 `)});
 app.get("/delete", function (req, res)
 {
-    let tmpid = req.query.id;
-    for (let i = 0; i < stack.length; i++) {
-        if (stack[i].id == tmpid)
-            stack.splice(i, 1);
-    }
+    let tmpid = parseInt(req.query.id);
+    const i = stack.findIndex((el) => el.id === tmpid)
+    stack.splice(i, 1);
     res.redirect("/");
 })
 
 app.get("/edit", function (req, res) {
-    let id = req.query.id;
+    let id = parseInt( req.query.id);
     res.send(`<form action="/edit?id=${id}" method="post">
             <input type="text" placeholder="Editor" name="eddata"/>
             <button type="submit">Edit</button> </form>`)
 })
 
 app.post("/edit", function (req, res) {
-    let tmpid = req.query.id;
-    for (let i = 0; i < stack.length; i++) {
-        if (stack[i].id == tmpid)
-            stack[i].value = req.body.eddata;
-    }
+    let tmpid = parseInt(req.query.id);
+    const i = stack.findIndex((el) => el.id === tmpid)
+    stack[i].value = req.body.eddata;
     res.redirect("/");
 })
 
