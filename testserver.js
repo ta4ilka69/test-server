@@ -31,7 +31,7 @@ app.get('/delete', function (req, res) {
 });
 
 app.get('/edit', function (req, res) {
-  let id = parseInt(req.query.id);
+  let id = parseInt(req.query.id,10);
   if (store.hasid(id)) {
     res.send(`<form action="/edit?id=${id}" method="post">
             <input type="text" placeholder="Editor" name="eddata"/>
