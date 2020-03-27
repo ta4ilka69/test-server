@@ -1,4 +1,3 @@
-/* eslint-disable linebreak-style */
 class Storage {
   constructor() {
     this.items = [];
@@ -11,32 +10,37 @@ class Storage {
   }
 
   edit(value, ind) {
-    const i = this.items.findIndex((el) => el.id === ind);
+    if(this.hasId(ind)){
+    const i = this.find_Index(ind);
     this.items[i].value = value;
+    return true;
+    }
+    return false;
   }
 
   delete(id) {
-    const i = this.items.findIndex((el) => el.id === id);
+    if(this.hasId(id))
+    { 
+    const i = this.find_Index(id);
     this.items.splice(i, 1);
+    return true;
+    }
+    return false;
   }
 
   list() {
-    let temps = '<ul>';
+    let temps = [];
     for (let i = 0; i < this.items.length; i += 1) {
-      const { id } = this.items[i];
-      temps
-        += `<li>${this.items[i].value}  `
-        + `<a href="/edit?id=${id}">Edit</a>`
-        + '  '
-        + `<a href="/delete?id=${id}">Delete</a>`
-        + '</li>';
+      const { id , value} = this.items[i];
+      temps[i] = {value:value, id:id};
     }
-    temps += '</ul>';
     return temps;
   }
+  find_Index(id){
+    return this.items.findIndex((item) => item.id === id);
+  }
 
-
-  hasid(id) {
+  hasId(id) {
     return this.items.findIndex((item) => item.id === id) >= 0;
   }
 }
