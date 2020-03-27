@@ -1,8 +1,12 @@
 <ul class = "List">
 {{#each list}}
-<li>{{this.value}}  <a href="/edit?id={{this.id}}">Edit</a> <a href="/delete?id={{this.id}}">Delete</a></li>
+<p>{{this.value}}  <a href="/edit?id={{this.id}}" class="ed">Edit</a> <a href="/delete?id={{this.id}}" class="ed">Delete</a></p>
 {{/each}}
 </ul>
+<div><center>
 <form action="/add" method="post">
-<input type="text" placeholder="Data" name="data"/>
-<button type="submit">Send</button>
+<input type="text" placeholder="Data" name="data" class="textbox"/>
+<button type="submit" class = "send">Send</button>
+</form>
+</center>
+</div>
