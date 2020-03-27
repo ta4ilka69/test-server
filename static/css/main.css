@@ -6,7 +6,55 @@ src:
   font-weight: normal;
   font-style: normal;
 }
-  body {
+html{
+  background-image: linear-gradient(to top, #7393cf 0%, #bac8e0 100%);
+}
+box{
+  height: 200%;
+}
+
+  button.send{
+    color: #aaac2e;
+    
+  text-decoration: none;
+  text-align: center;
+  padding: 3px 10px;
+  display: inline;
+  font-family: "OpenSans-BoldItalic",sans-serif;
+  border: 1px solid #ec561b;
+  font-size: 25px;
+  }
+
+  .box{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    position: relative;
+    box-sizing: border-box;
+    width: 500px;    
+    background-color: #f5f5f5;
+  }
+  a.ed{
+  color: #aaac2e;
+  text-decoration: none;
+  text-align: center;
+  padding: 2px 10px;
+  display: inline;
+  font-family: "OpenSans-BoldItalic",sans-serif;
+  border: 1px solid #ec561b;
+  }
+
+  p {
+    padding-top: 6px;
+    font-size: 25px;
     font-family: "OpenSans-SemiBoldItalic", sans-serif;
-    background-image: linear-gradient(to top, #7393cf 0%, #bac8e0 100%);
+  }
+
+  input.textbox{
+    margin-top: 7px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-bottom: 7px;
+    font-size: 25px;
+    font-family: "OpenSans-SemiBoldItalic", sans-serif;
   }
