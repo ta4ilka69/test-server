@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "OpenSans-BoldItalic";
+src: 
+    url("fonts/OpenSans-SemiBoldItalic.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+  body {
+    font-family: "OpenSans-SemiBoldItalic", sans-serif;
+    background-image: linear-gradient(to top, #7393cf 0%, #bac8e0 100%);
+  }
