@@ -1,0 +1,8 @@
+<ul class = "List">
+{{#each list}}
+<li>{{this.value}}  <a href="/edit?id={{this.id}}">Edit</a> <a href="/delete?id={{this.id}}">Delete</a></li>
+{{/each}}
+</ul>
+<form action="/add" method="post">
+<input type="text" placeholder="Data" name="data"/>
+<button type="submit">Send</button>
