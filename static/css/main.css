@@ -6,6 +6,11 @@ src:
   font-weight: normal;
   font-style: normal;
 }
+h2{
+  padding-top: 6px;
+  font-size: 25px;
+  font-family: "OpenSans-ExtraBoldItalic", sans-serif;
+}
 
 body{
   background-image: linear-gradient(to top, #7393cf 0%, #bac8e0 100%);
