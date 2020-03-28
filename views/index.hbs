@@ -1,5 +1,6 @@
+<h2><center>{{this.time}}</center></h2>
 <ul class = "List">
-{{#each list}}
+{{#each this.list}}
 <p>{{this.value}}  <a href="/edit?id={{this.id}}" class="ed">Edit</a> <a href="/delete?id={{this.id}}" class="del">Delete</a></p>
 {{/each}}
 </ul>
