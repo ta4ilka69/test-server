@@ -1,13 +1,16 @@
-<h2><center>{{this.time}}</center></h2>
-<ul class = "List">
-{{#each this.list}}
-<p>{{this.value}}  <a href="/edit?id={{this.id}}" class="ed">Edit</a> <a href="/delete?id={{this.id}}" class="del">Delete</a></p>
-{{/each}}
-</ul>
+<div class="date"><center>{{this.time}}</center></div>
 <div><center>
 <form action="/add" method="post">
 <input type="text" placeholder="Data" name="data" class="textbox_add_or_ed"/>
-<button type="submit" class = "send">Send</button>
+<button type="submit" class = "send">+</button>
 </form>
 </center>
 </div>
+<ul class = "List">
+{{#each this.list}}
+<div class="item_box">
+<div class = "value_item">{{this.value}}</div><div class="buttons_ed_del"><a href="/edit?id={{this.id}}" class="ed"><img src="/static/svg_files/edit_pencil.svg"></a> 
+<a href="/delete?id={{this.id}}" class="del"><img src="/static/svg_files/delete_button.svg"></a></div>
+</div>
+{{/each}}
+</ul>
