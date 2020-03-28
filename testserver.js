@@ -16,9 +16,13 @@ app.use("/static",express.static(__dirname + '/static'));
 
 const store = new Storage();
 
+const Time = new Date();
+
+
 app.get('/', (req, res) => {
+  const time = Time.getHours().toString()+":"+Time.getMinutes().toString()+", "+Time.getDate().toString()+"."+(Time.getMonth()+1).toString()+"."+Time.getFullYear().toString();
   let list = store.list();
-  res.render("index", {list});
+  res.render("index", {list:list,time:time});
 });
 
 app.get('/delete', (req, res) => {
@@ -32,8 +36,9 @@ app.get('/delete', (req, res) => {
 
 app.get('/edit', (req, res) => {
   const id = parseInt(req.query.id, 10);
+  const time = Time.getHours().toString()+":"+Time.getMinutes().toString()+", "+Time.getDate().toString()+"."+(Time.getMonth()+1).toString()+"."+Time.getFullYear().toString();
   if (store.hasId(id)) {
-    res.render("Edit",{id:id})
+    res.render("Edit",{id:id,time:time})
   } else {
     res.status(404).send('Not found');
   }
