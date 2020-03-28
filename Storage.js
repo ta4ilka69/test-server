@@ -1,6 +1,8 @@
 class Storage {
   constructor() {
     this.items = [];
+    this.Days_Names = ["Воскресенье","Понедельник","Вторник", "Среда", "Четверг","Пятница", "Суббота"];
+    this.Months_Names = ["Января","Февраля","Марта","Апреля","Мая","Июня","Июля","Августа","Сентября","Октября","Ноября","Декабря"];
     this.id = 1;
   }
 
@@ -43,6 +45,14 @@ class Storage {
   hasId(id) {
     return this.items.findIndex((item) => item.id === id) >= 0;
   }
+
+  getDay_byNumder(i){
+    return this.Days_Names[i];
+  }
+  getMonth_byNumber(i){
+    return this.Months_Names[i];
+  }
 }
+
 
 module.exports = Storage;
