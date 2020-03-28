@@ -20,7 +20,7 @@ const store = new Storage();
 
 app.get('/', (req, res) => {
   const Time = new Date();
-  const time = Time.getHours().toString()+":"+Time.getMinutes().toString()+", "+Time.getDate().toString()+"."+(Time.getMonth()+1).toString()+"."+Time.getFullYear().toString();
+  const time = store.getDay_byNumder(Time.getUTCDay())+", "+Time.getDate().toString()+" "+store.getMonth_byNumber(Time.getMonth());
   let list = store.list();
   res.render("index", {list:list,time:time});
 });
@@ -37,7 +37,7 @@ app.get('/delete', (req, res) => {
 app.get('/edit', (req, res) => {
   const id = parseInt(req.query.id, 10);
   const Time = new Date();
-  const time = Time.getHours().toString()+":"+Time.getMinutes().toString()+", "+Time.getDate().toString()+"."+(Time.getMonth()+1).toString()+"."+Time.getFullYear().toString();
+  const time = store.getDay_byNumder(Time.getUTCDay())+", "+Time.getDate().toString()+" "+store.getMonth_byNumber(Time.getMonth());
   if (store.hasId(id)) {
     res.render("Edit",{id:id,time:time})
   } else {
