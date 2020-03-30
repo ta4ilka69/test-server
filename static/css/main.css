@@ -37,6 +37,17 @@ line-height: 34px;
 text-align: center;
 color: #000000;
 }
+div.items_count{
+  position: relative;
+width: 160px;
+height: 16px;
+left: 20px;
+font-family: Open Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 15px;
+line-height: 16px;
+}
 
 body{
   background-image: linear-gradient(to top, #7393cf 0%, #bac8e0 100%);
