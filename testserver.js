@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
   const Time = new Date();
   const time = store.getDay_byNumder(Time.getUTCDay())+", "+Time.getDate().toString()+" "+store.getMonth_byNumber(Time.getMonth());
   let list = store.list();
-  res.render("index", {list:list,time:time});
+  res.render("index", {list:list,time:time, count:list.length});
 });
 
 app.get('/delete', (req, res) => {
