@@ -1,116 +1,114 @@
 @font-face {
-  font-family: "OpenSans-BoldItalic";
-src: 
-    url("fonts/OpenSans-SemiBoldItalic.ttf")
-      format("truetype");
+  font-family: 'OpenSans-BoldItalic';
+  src: url('fonts/OpenSans-SemiBoldItalic.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
-div.value_item{
-margin-top: 4px;
-width: 300px;
-height: 25px;
-font-family: Open Sans;
-font-style: normal;
-font-weight: normal;
-font-size: 20px;
-line-height: 20px;
-color: #000000;
-display: inline-block;
+div.value_item {
+  margin-top: 4px;
+  width: 300px;
+  height: 25px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 20px;
+  color: #000000;
+  display: inline-block;
 }
 
-div.item_box{
-padding-top: 2px;
-background-color: #81e3e3;
-width: 430px;
-margin-top: 10px;
-border-radius: 3px;
-padding-left: 3px;
+div.item_box {
+  padding-top: 2px;
+  background-color: #81e3e3;
+  width: 430px;
+  margin-top: 10px;
+  border-radius: 3px;
+  padding-left: 3px;
 }
 
-div.date{
-font-family: Open Sans;
-font-style: normal;
-font-weight: bold;
-font-size: 25px;
-line-height: 34px;
-text-align: center;
-color: #000000;
-}
-div.items_count{
-  position: relative;
-width: 160px;
-height: 16px;
-left: 20px;
-font-family: Open Sans;
-font-style: normal;
-font-weight: normal;
-font-size: 15px;
-line-height: 16px;
-}
-
-body{
-  background-image: linear-gradient(to top, #7393cf 0%, #bac8e0 100%);
-  min-height: 100vh;
-  margin: 0;
-}
-
-  button.send{
-  color: #ffffff;
-  text-align: center;
-  width: 60px;
-height: 40px;
+div.date {
   font-family: Open Sans;
   font-style: normal;
   font-weight: bold;
   font-size: 25px;
   line-height: 34px;
-  background: #6664FF;
-border-radius: 3px;
-  font-size: 25px;
-  }
+  text-align: center;
+  color: #000000;
+}
+div.items_count {
+  position: relative;
+  width: 160px;
+  height: 16px;
+  left: 20px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 16px;
+}
 
-  .box_list{
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 100px;
-    position: relative;
-    box-sizing: border-box;
-    width: 500px;    
-    background: #F4F7FC;
-    border-radius: 4px;
-    padding-bottom: 20px;
-    padding-top: 50px;
-  }
-  a.del{
-    width: 18px;
-    height: 18px;
-  }
-  a.ed{
+body {
+  background-image: linear-gradient(to top, #7393cf 0%, #bac8e0 100%);
+  min-height: 100vh;
+  margin: 0;
+}
+
+button.send {
+  color: #ffffff;
+  text-align: center;
+  width: 60px;
+  height: 40px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 34px;
+  background: #6664ff;
+  border-radius: 3px;
+  font-size: 25px;
+}
+
+.box_list {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  position: relative;
+  box-sizing: border-box;
+  width: 500px;
+  background: #f4f7fc;
+  border-radius: 4px;
+  padding-bottom: 20px;
+  padding-top: 50px;
+}
+a.del {
   width: 18px;
   height: 18px;
-  }
-  input.textbox_add_or_ed{
-    background: #FFFFFF;
-    border: 1px solid #DDDDDD;
-    box-sizing: border-box;
-    border-radius: 3px;
-    width: 290px;
-    height: 40px;
-    margin-top: 30px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    margin-bottom: 7px;
-    padding-left: 20px;
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 20px; 
-  }
-  div.buttons_ed_del{
-    margin-top: 5px;
-    position: absolute;
-    right: 35px;
-    display: inline-block;
-  }
+}
+a.ed {
+  width: 18px;
+  height: 18px;
+}
+input.textbox_add_or_ed {
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  box-sizing: border-box;
+  border-radius: 3px;
+  width: 290px;
+  height: 40px;
+  margin-top: 30px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-bottom: 7px;
+  padding-left: 20px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
+}
+div.buttons_ed_del {
+  margin-top: 5px;
+  position: absolute;
+  right: 35px;
+  display: inline-block;
+}

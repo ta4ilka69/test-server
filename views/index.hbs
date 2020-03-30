@@ -1,17 +1,22 @@
-<div class="date"><center>{{this.time}}</center></div>
-<div><center>
-<form action="/add" method="post">
-<input type="text" placeholder="Data" name="data" class="textbox_add_or_ed"/>
-<button type="submit" class = "send">+</button>
-</form>
-</center>
+<div class="date">
+    <center>{{time}}</center>
 </div>
-<div class="items_count">Количество элементов: {{this.count}}</div>
-<ul class = "List">
-{{#each this.list}}
-<div class="item_box">
-<div class = "value_item">{{this.value}}</div><div class="buttons_ed_del"><a href="/edit?id={{this.id}}" class="ed"><img src="/static/svg_files/edit_pencil.svg"></a> 
-<a href="/delete?id={{this.id}}" class="del"><img src="/static/svg_files/delete_button.svg"></a></div>
+<div>
+    <center>
+        <form action="/add" method="post">
+            <input type="text" placeholder="Data" name="data" class="textbox_add_or_ed" />
+            <button type="submit" class="send">+</button>
+        </form>
+    </center>
 </div>
-{{/each}}
+<div class="items_count">Количество элементов: {{list.length}}</div>
+<ul class="List">
+    {{#each this.list}}
+    <div class="item_box">
+        <div class="value_item">{{this.value}}</div>
+        <div class="buttons_ed_del"><a href="/edit?id={{this.id}}" class="ed"><img
+                    src="/static/svg_files/edit_pencil.svg"></a>
+            <a href="/delete?id={{this.id}}" class="del"><img src="/static/svg_files/delete_button.svg"></a></div>
+    </div>
+    {{/each}}
 </ul>
