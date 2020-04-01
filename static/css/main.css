@@ -4,111 +4,138 @@
   font-weight: normal;
   font-style: normal;
 }
-div.value_item {
-  margin-top: 4px;
-  width: 300px;
-  height: 25px;
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 20px;
-  color: #000000;
-  display: inline-block;
-}
 
-div.item_box {
-  padding-top: 2px;
-  background-color: #81e3e3;
-  width: 430px;
-  margin-top: 10px;
-  border-radius: 3px;
-  padding-left: 3px;
-}
-
-div.date {
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 25px;
-  line-height: 34px;
-  text-align: center;
-  color: #000000;
-}
-div.items_count {
-  position: relative;
-  width: 160px;
-  height: 16px;
-  left: 20px;
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 16px;
-}
 
 body {
-  background-image: linear-gradient(to top, #7393cf 0%, #bac8e0 100%);
+  background: linear-gradient(180deg, #bac8e0 0%, #6a85b6 100%);
   min-height: 100vh;
+  min-width: 100vw;
   margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'Open Sans', 'Helvetica Neue', sans-serif;
+  font-style: normal;
 }
 
-button.send {
-  color: #ffffff;
-  text-align: center;
-  width: 60px;
-  height: 40px;
-  font-family: Open Sans;
-  font-style: normal;
+.main_container {
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background: #f4f7fc;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 50px 20px;
+  width: 400px;
+  margin-top: 30px;
+}
+button{
+  border: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-sizing: border-box;
+  background: #6664ff;
+}
+.date {
+  width: 236px;
+  height: 34px;
+  position: relative;
   font-weight: bold;
   font-size: 25px;
   line-height: 34px;
-  background: #6664ff;
-  border-radius: 3px;
-  font-size: 25px;
-}
-
-.box_list {
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 100px;
-  position: relative;
-  box-sizing: border-box;
-  width: 500px;
-  background: #f4f7fc;
-  border-radius: 4px;
-  padding-bottom: 20px;
-  padding-top: 50px;
+  margin-bottom: 30px;
 }
-a.del {
-  width: 18px;
-  height: 18px;
+
+.imput_container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
 }
-a.ed {
-  width: 18px;
-  height: 18px;
-}
+
 input.textbox_add_or_ed {
   background: #ffffff;
-  border: 1px solid #dddddd;
   box-sizing: border-box;
   border-radius: 3px;
+  border: 1px solid #dddddd;
   width: 290px;
   height: 40px;
-  margin-top: 30px;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  margin-bottom: 7px;
-  padding-left: 20px;
-  font-family: Open Sans;
-  font-style: normal;
   font-weight: normal;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-right: 4px;  
+  align-self: center;
 }
-div.buttons_ed_del {
-  margin-top: 5px;
+.add_button {
+  align-self:center;
+  width: 60px;
+  height: 40px;
+  color: white;
+  border-radius: 3px;
+  background-image: url(/static/svg_files/plus.svg);
+  background-size: 100%;
+}
+.items_count {
+  position: relative;
+  margin-bottom: 0;
+  margin-top: 30px;
+  width: 220px;
+  height: 16px;
+  font-weight: normal;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.list_item_container {
+  margin-top: 10px;
+  background: #e0e8f5;
+  border-radius: 3px;
+  width: 360px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  height: 44px;
+}
+
+.value_of_item {
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 20px;
+  padding: 12px 20px;
+}
+
+.buttons_ed_del {
   position: absolute;
-  right: 35px;
+  right: 40px;
+}
+.edit_button {
   display: inline-block;
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+  background-image: url(/static/svg_files/edit_pencil.svg);
+}
+
+.delete_button {
+  display: inline-block;
+  width: 16px;
+  height: 18px;
+  background-image: url(/static/svg_files/delete_button.svg);
+}
+
+.edit_confirm_button {
+  align-self: center;
+  width: 60px;
+  height: 40px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background: #6664ff;
+  color: white;
+  background-image: url(/static/svg_files/edit_confirm.svg);
+  background-size:86%;
 }
