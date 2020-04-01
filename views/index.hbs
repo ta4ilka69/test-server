@@ -1,22 +1,16 @@
+<div>
 <div class="date">
-    <center>{{time}}</center>
+    {{time}}
 </div>
 <div>
-    <center>
-        <form action="/add" method="post">
-            <input type="text" placeholder="Data" name="data" class="textbox_add_or_ed" />
-            <button type="submit" class="send">+</button>
-        </form>
-    </center>
+    {{>form typeOfLink = 'add' typeOfLink_is_edit = false}}
 </div>
 <div class="items_count">Количество элементов: {{list.length}}</div>
-<ul class="List">
-    {{#each this.list}}
-    <div class="item_box">
-        <div class="value_item">{{this.value}}</div>
-        <div class="buttons_ed_del"><a href="/edit?id={{this.id}}" class="ed"><img
-                    src="/static/svg_files/edit_pencil.svg"></a>
-            <a href="/delete?id={{this.id}}" class="del"><img src="/static/svg_files/delete_button.svg"></a></div>
-    </div>
-    {{/each}}
-</ul>
+{{#each this.list}}
+<div class="list_item_container">
+    <div class="value_of_item">{{this.value}}</div>
+    <div class="buttons_ed_del"><a href="/edit?id={{id}}" class="edit_button"></a>
+        <a href="/delete?id={{id}}" class="delete_button"></a></div>
+</div>
+{{/each}}
+</div>
