@@ -1,14 +1,6 @@
-{{#if typeOfLink_is_edit}}
-<form action="/{{typeOfLink}}?id={{el.id}}" method="post">
+<form action={{#if typeOfLink_is_edit}}"/{{typeOfLink}}?id={{id}}"{{else}}"/{{typeOfLink}}"{{/if}}method="post">
     <div class="input_container">
-        <input type="text" placeholder="{{el.value}}" name="eddata" class="textbox_add_or_ed" />
-        <button type="submit" class="edit_confirm_button"></button>
+        <input type="text" placeholder={{placeholder}} name="data" class="textbox_add_or_ed" />
+        <button type="submit" class={{buttonClass}}></button>
     </div>
 </form>
-{{else}}
-<form action="/{{typeOfLink}}" method="post">
-    <div class="input_container"></div><input type="text" placeholder="Add" name="data" class="textbox_add_or_ed" />
-        <button type="submit" class="add_button"></button>
-    </div>
-</form>
-{{/if}}
