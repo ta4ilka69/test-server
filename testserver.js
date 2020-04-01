@@ -39,10 +39,8 @@ app.get('/delete', (req, res) => {
 
 app.get('/edit', (req, res) => {
   const id = parseInt(req.query.id, 10);
-  const dateFormatter = new DateFormatter();
-  const time = `${dateFormatter.formatDayOfWeek()}, ${dateFormatter.formatDay()} ${dateFormatter.formatMonth()}`;
   if (store.hasId(id)) {
-    res.render('Edit', { id: id, time: time });
+    res.render('Edit', {el:store.items[store.findIndex(id)]});
   } else {
     res.status(404).send('Not found');
   }
