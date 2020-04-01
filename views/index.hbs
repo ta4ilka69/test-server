@@ -1,16 +1,16 @@
 <div>
-<div class="date">
-    {{time}}
-</div>
-<div>
-    {{>form typeOfLink = 'add' typeOfLink_is_edit = false}}
-</div>
-<div class="items_count">Количество элементов: {{list.length}}</div>
-{{#each this.list}}
-<div class="list_item_container">
-    <div class="value_of_item">{{this.value}}</div>
-    <div class="buttons_ed_del"><a href="/edit?id={{id}}" class="edit_button"></a>
-        <a href="/delete?id={{id}}" class="delete_button"></a></div>
-</div>
-{{/each}}
+    <div class="date">
+        {{time}}
+    </div>
+    <div>
+        {{>form typeOfLink = 'add' typeOfLink_is_edit = false placeholder = "Add" buttonClass = "add_button"}}
+    </div>
+    <div class="items_count">Количество элементов: {{list.length}}</div>
+    {{#each this.list}}
+    <div class="list_item_container">
+        <div class="value_of_item">{{this.value}}</div>
+        <div class="buttons_ed_del"><a href="/edit?id={{id}}" class="edit_button"></a>
+            <a href="/delete?id={{id}}" class="delete_button"></a></div>
+    </div>
+    {{/each}}
 </div>
