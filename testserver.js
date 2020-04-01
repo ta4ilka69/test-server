@@ -40,7 +40,8 @@ app.get('/delete', (req, res) => {
 app.get('/edit', (req, res) => {
   const id = parseInt(req.query.id, 10);
   if (store.hasId(id)) {
-    res.render('Edit', {el:store.items[store.findIndex(id)]});
+    const value = store.items[store.findIndex(id)].value.toString();
+    res.render('Edit', { id, value });
   } else {
     res.status(404).send('Not found');
   }
@@ -48,7 +49,7 @@ app.get('/edit', (req, res) => {
 
 app.post('/edit', (req, res) => {
   const tmpid = parseInt(req.query.id, 10);
-  if (store.edit(req.body.eddata, tmpid)) {
+  if (store.edit(req.body.data, tmpid)) {
     res.redirect('/');
   } else {
     res.status(404).send('Not found');
