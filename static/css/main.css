@@ -5,7 +5,6 @@
   font-style: normal;
 }
 
-
 body {
   background: linear-gradient(180deg, #bac8e0 0%, #6a85b6 100%);
   min-height: 100vh;
@@ -30,13 +29,7 @@ body {
   width: 400px;
   margin-top: 30px;
 }
-button{
-  border: none;
-  background-position: center;
-  background-repeat: no-repeat;
-  box-sizing: border-box;
-  background: #6664ff;
-}
+
 .date {
   width: 236px;
   height: 34px;
@@ -50,10 +43,11 @@ button{
   margin-bottom: 30px;
 }
 
-.imput_container {
+.input_container {
   display: flex;
   align-items: center;
   flex-direction: row;
+  justify-content: center;
 }
 
 input.textbox_add_or_ed {
@@ -61,24 +55,29 @@ input.textbox_add_or_ed {
   box-sizing: border-box;
   border-radius: 3px;
   border: 1px solid #dddddd;
-  width: 290px;
+  flex: 1;
   height: 40px;
   font-weight: normal;
   font-size: 15px;
   line-height: 20px;
   padding-left: 20px;
   padding-right: 20px;
-  margin-right: 4px;  
+  margin-right: 10px;
   align-self: center;
 }
 .add_button {
-  align-self:center;
+  padding: 0;
+  border: none;
+  align-self: center;
   width: 60px;
   height: 40px;
-  color: white;
   border-radius: 3px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #6664ff;
+  color: white;
   background-image: url(/static/svg_files/plus.svg);
-  background-size: 100%;
+  background-size: 30%;
 }
 .items_count {
   position: relative;
@@ -129,13 +128,16 @@ input.textbox_add_or_ed {
 }
 
 .edit_confirm_button {
+  padding: 0;
+  border: none;
   align-self: center;
   width: 60px;
   height: 40px;
+  border-radius: 3px;
   background-position: center;
   background-repeat: no-repeat;
-  background: #6664ff;
+  background-color: #6664ff;
   color: white;
   background-image: url(/static/svg_files/edit_confirm.svg);
-  background-size:86%;
+  background-size: 30%;
 }
