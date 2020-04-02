@@ -15,7 +15,7 @@ body {
   font-style: normal;
 }
 
-.main_container {
+.main-container {
   position: absolute;
   display: block;
   top: 50%;
@@ -30,7 +30,7 @@ body {
   margin-top: 30px;
 }
 
-.date {
+.main-container__date {
   width: 236px;
   height: 34px;
   position: relative;
@@ -43,14 +43,14 @@ body {
   margin-bottom: 30px;
 }
 
-.input_container {
+.input-container {
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: center;
 }
 
-input.textbox_add_or_ed {
+.input-container__textbox-add-edit{
   background: #ffffff;
   box-sizing: border-box;
   border-radius: 3px;
@@ -65,7 +65,7 @@ input.textbox_add_or_ed {
   margin-right: 10px;
   align-self: center;
 }
-.add_button {
+.input-container__add-button {
   padding: 0;
   border: none;
   align-self: center;
@@ -79,7 +79,7 @@ input.textbox_add_or_ed {
   background-image: url(/static/svg_files/plus.svg);
   background-size: 30%;
 }
-.items_count {
+.main-container__items-count {
   position: relative;
   margin-bottom: 0;
   margin-top: 30px;
@@ -90,7 +90,7 @@ input.textbox_add_or_ed {
   margin-bottom: 10px;
 }
 
-.list_item_container {
+.list-container {
   margin-top: 10px;
   background: #e0e8f5;
   border-radius: 3px;
@@ -101,18 +101,18 @@ input.textbox_add_or_ed {
   height: 44px;
 }
 
-.value_of_item {
+.list-container__value {
   font-weight: normal;
   font-size: 15px;
   line-height: 20px;
   padding: 12px 20px;
 }
 
-.buttons_ed_del {
+.list-container__buttons-group {
   position: absolute;
   right: 40px;
 }
-.edit_button {
+.__buttons-group__edit-button {
   display: inline-block;
   margin-right: 10px;
   width: 18px;
@@ -120,14 +120,14 @@ input.textbox_add_or_ed {
   background-image: url(/static/svg_files/edit_pencil.svg);
 }
 
-.delete_button {
+.__buttons-group__delete-button {
   display: inline-block;
   width: 16px;
   height: 18px;
   background-image: url(/static/svg_files/delete_button.svg);
 }
 
-.edit_confirm_button {
+.input-container__edit-button {
   padding: 0;
   border: none;
   align-self: center;
