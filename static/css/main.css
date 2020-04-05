@@ -31,7 +31,7 @@ body {
 }
 
 .main-container__date {
-  width: 236px;
+  width: 300px;
   height: 34px;
   position: relative;
   font-weight: bold;
@@ -112,7 +112,7 @@ body {
   position: absolute;
   right: 40px;
 }
-.__buttons-group__edit-button {
+.list-container__buttons-group__edit-button {
   display: inline-block;
   margin-right: 10px;
   width: 18px;
@@ -120,7 +120,7 @@ body {
   background-image: url(/static/svg_files/edit_pencil.svg);
 }
 
-.__buttons-group__delete-button {
+.list-container__buttons-group__delete-button {
   display: inline-block;
   width: 16px;
   height: 18px;
